@@ -1,6 +1,6 @@
 create_project project_1 ./project_1 -part xcve2302-sfva784-1LP-e-S
 create_bd_design "ext_platform_part" -mode batch
-instantiate_example_design -template xilinx.com:design:ext_platform_part:1.0 -design ext_platform_part -options { Include_AIE.VALUE true Include_DDR.VALUE true}
+instantiate_example_design -template xilinx.com:design:ext_platform_part:1.0 -design ext_platform_part -options { Clock_Options.VALUE {clk_out1 250.000 0 true} Include_AIE.VALUE true Include_DDR.VALUE true}
 
 update_compile_order -fileset sources_1
 set_property name DDR4 [get_bd_intf_ports CH0_DDR4_0_0]
